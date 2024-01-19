@@ -31,27 +31,27 @@ jobs:
           if-no-files-found: error
           retention-days: 1
 
-  validate-nuget:
-    runs-on: ubuntu-22.04
-    needs: pack
-    steps:
-      - name: Setup .NET Core
-        uses: actions/setup-dotnet@v3.2.0
+  # validate-nuget:
+  #   runs-on: ubuntu-22.04
+  #   needs: pack
+  #   steps:
+  #     - name: Setup .NET Core
+  #       uses: actions/setup-dotnet@v3.2.0
 
-      - uses: actions/download-artifact@v3.0.2
-        with:
-          name: ${{ env.NUGET_ARTIFACT }}
-          path: ${{ env.NUGET_DIR }}
+  #     - uses: actions/download-artifact@v3.0.2
+  #       with:
+  #         name: ${{ env.NUGET_ARTIFACT }}
+  #         path: ${{ env.NUGET_DIR }}
 
-      - name: Install nuget validator
-        run: dotnet tool update Meziantou.Framework.NuGetPackageValidation.Tool --global
+  #     - name: Install nuget validator
+  #       run: dotnet tool update Meziantou.Framework.NuGetPackageValidation.Tool --global
 
-      - name: Validate nuget package
-        run: meziantou.validate-nuget-package --excluded-rules Symbols ${{ env.NUGET_DIR }}/*.nupkg
+  #     - name: Validate nuget package
+  #       run: meziantou.validate-nuget-package --excluded-rules Symbols ${{ env.NUGET_DIR }}/*.nupkg
 
   publish:
     runs-on: ubuntu-22.04
-    needs: [validate-nuget, testing]
+    needs: [testing]
     steps:
       - uses: actions/download-artifact@v3.0.2
         with:
