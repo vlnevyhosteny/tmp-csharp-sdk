@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Version>1.0.0</Version>
+    <FileVersion>1.0.0</FileVersion>
+    <Authors>ACME Support</Authors>
+    <Description>Client for ExampleSdk</Description>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PackageId>ExampleSdk</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageTags>SDK Client ExampleSdk</PackageTags>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://example.com/org/repo</PackageProjectUrl>
+    <PackageIcon>logo.png</PackageIcon>
+    <PackageReleaseNotes>Name is now included in pages</PackageReleaseNotes>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://example.com/org/repo</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryCommit>commit</RepositoryCommit> <!-- Value is inserted in CI right before publish -->
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="../../assets/logo.png" Pack="true" PackagePath="\" />
+    <None Include="../../LICENSE" Pack="true" PackagePath="\" />
+    <None Include="../../README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+</Project>
