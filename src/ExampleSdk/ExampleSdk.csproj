@@ -18,7 +18,6 @@
     <PackageTags>SDK Client ExampleSdk</PackageTags>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl>https://example.com/org/repo</PackageProjectUrl>
-    <PackageIcon>logo.png</PackageIcon>
     <PackageReleaseNotes>Name is now included in pages</PackageReleaseNotes>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://example.com/org/repo</RepositoryUrl>
