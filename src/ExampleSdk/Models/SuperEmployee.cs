@@ -12,6 +12,6 @@ using System.Text.Json.Serialization;
 using System.Text.Json;
 using ExampleSdk.Core;
 namespace ExampleSdk.Models;
-public class SuperEmployee : Employee , Contractor
+public class SuperEmployee : Employee 
 {
 }

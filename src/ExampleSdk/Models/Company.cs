@@ -19,7 +19,7 @@ public class Company
     [JsonPropertyName("leader")]
     public ILeader? Leader { get; set; }
     [JsonPropertyName("personeel")]
-    public IEnumerable<ICompanyPersoneel?>? Personeel { get; set; }
+    public CompanyPersoneel? Personeel { get; set; }
 
     public interface ILeader
     { }

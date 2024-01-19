@@ -15,7 +15,7 @@ namespace ExampleSdk.Models;
 public class Employee : Person
 {
     [JsonPropertyName("department")]
-    public Department? Department { get; set; }
+    public Department? _Department { get; set; }
     [JsonPropertyName("wage")]
     public double? Wage { get; set; }
 
